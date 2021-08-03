@@ -4,7 +4,7 @@ base_config:
 release_branches:
   - master
 
-subscriptions:
-  - workload: pull_request_merged:{{github_repo}}:{{release_branch}}:*
-    actions:
-      - bash:.expeditor/noop.sh
+staging_areas:
+  - test:
+      workload: pull_request_merged:*
+      timeout: 2m

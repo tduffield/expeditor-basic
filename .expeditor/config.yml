@@ -1,0 +1,10 @@
+base_config:
+  file: .expeditor/base_config.yml
+
+release_branches:
+  - master
+
+subscriptions:
+  - workload: pull_request_merged:{{github_repo}}:{{release_branch}}:*
+    actions:
+      - bash:.expeditor/noop.sh
